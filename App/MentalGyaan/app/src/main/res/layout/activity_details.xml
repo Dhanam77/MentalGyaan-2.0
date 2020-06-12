@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingRight="16dp"
+    android:paddingLeft="16dp"
+    android:paddingBottom="16dp"
+    android:paddingTop="16dp"
+    tools:context=".DetailsActivity">
+
+    <LinearLayout
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Details"
+            android:layout_marginBottom="20dp"
+            android:textSize="35sp"
+            android:textColor="#000000"
+            android:textAlignment="center"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="Age : "
+                android:textColor="#000000"
+                android:textSize="20sp"/>
+            <EditText
+                android:id="@+id/editAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your Age"
+                android:inputType="numberDecimal"
+                android:maxLength="3"/>
+        </LinearLayout>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:id="@+id/gender">
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Gender: "
+                android:textSize="20sp"
+                android:textColor="#000000"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Male"
+                android:id="@+id/male"
+                android:textSize="20sp"
+                android:layout_marginRight="10dp"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Female"
+                android:id="@+id/female"
+                android:textSize="20sp"/>
+        </RadioGroup>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:id="@+id/working">
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Are you Working? : "
+                android:textSize="20sp"
+                android:textColor="#000000"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Yes"
+                android:id="@+id/yes"
+                android:textSize="20sp"
+                android:layout_marginRight="10dp"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="No"
+                android:id="@+id/no"
+                android:textSize="20sp"/>
+        </RadioGroup>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+
+            android:id="@+id/treatment">
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Any ongoing Treatment : "
+                android:textSize="20sp"
+                android:textColor="#000000"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Yes"
+                android:id="@+id/yes1"
+                android:textSize="20sp"
+                android:layout_marginRight="10dp"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="No"
+                android:id="@+id/no1"
+                android:textSize="20sp"/>
+        </RadioGroup>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+
+            android:id="@+id/work">
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Work Interfere ?: "
+                android:textSize="20sp"
+                android:textColor="#000000"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Sometimes"
+                android:id="@+id/sometimes"
+                android:textSize="20sp"
+                android:layout_marginRight="10dp"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Never"
+                android:id="@+id/never"
+                android:textSize="20sp"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Often"
+                android:id="@+id/often"
+                android:textSize="20sp"
+                android:layout_marginRight="10dp"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Rarely"
+                android:id="@+id/rarely"
+                android:textSize="20sp"/>
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/buttonAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/buttons"
+            android:text="Add Details"
+            android:textColor="@android:color/white"
+            android:textSize="22dp" />
+
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DoneActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:layout_margin="30dp"
+        android:layout_centerInParent="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/btngroup">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txttotalscore"
+                android:text="Depression Score : 0"
+                android:textSize="30sp"/>
+
+
+            <Button
+                android:layout_width="match_parent"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="TAKE AGAIN"
+                android:textSize="15sp"
+                android:background="#ad1457"
+                android:layout_margin="8dp"
+                android:id="@+id/buttontryagain"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

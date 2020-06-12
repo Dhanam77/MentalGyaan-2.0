@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1001964950988",
+    "firebase_url": "https://mentalgyaan.firebaseio.com",
+    "project_id": "mentalgyaan",
+    "storage_bucket": "mentalgyaan.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1001964950988:android:b5a118f371cab96d92f969",
+        "android_client_info": {
+          "package_name": "com.example.mentalgyaan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1001964950988-6bphb7s5ddlr26b9bc1qifbkseachjhg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mentalgyaan",
+            "certificate_hash": "26a3901b1a0b4cf0fcbdad976f59e782e3f09856"
+          }
+        },
+        {
+          "client_id": "1001964950988-6fsbh5o3hkg40rglktv07ph3op70ls2r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7I9iG5tNxWhwrloo64dcn-1ZV_orQtgM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1001964950988-6fsbh5o3hkg40rglktv07ph3op70ls2r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

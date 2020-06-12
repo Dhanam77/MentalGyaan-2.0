@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/therapy_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp"
+    android:elevation="10dp"
+    android:layout_margin="7dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+
+        <ImageView
+            android:id="@+id/therapy_image"
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:scaleType="centerCrop"
+            android:src="@android:color/holo_blue_bright" />
+
+
+        <TextView
+            android:id="@+id/therapy_text"
+            app:layout_constraintTop_toBottomOf="@id/therapy_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|left"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="75dp"
+            android:text="Release Negative Thoughts"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="65dp"
+            android:background="@android:color/darker_gray" />
+
+
+
+        <TextView
+            android:id="@+id/therapy_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="30dp"
+            android:text="Dhanam Parekh"
+            android:textColor="@android:color/white"
+            android:textSize="19dp"
+            android:textStyle="bold" />
+
+    </FrameLayout>
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

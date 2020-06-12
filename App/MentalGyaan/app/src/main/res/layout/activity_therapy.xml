@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TherapyActivity">
+
+    <include
+        android:id="@+id/therapy_bar"
+        layout="@layout/app_bar" />
+
+
+    <RelativeLayout
+        android:id="@+id/breathe_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/start_breathe"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/buttons"
+            android:text="Start"
+            android:textColor="@android:color/white"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:id="@+id/breathe_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/breathe_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="Breathe in for"
+            android:textSize="23dp" />
+
+
+        <TextView
+            android:id="@+id/breate_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/breathe_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="Breathe out for"
+            android:textSize="23dp"
+            android:visibility="invisible" />
+
+
+        <TextView
+            android:id="@+id/timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/breathe_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80dp"
+            android:text="10"
+            android:textSize="33dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/breathe_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="140dp"
+            android:text="Seconds"
+            android:textSize="23dp" />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/breathe_image"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/images" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/breathe_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

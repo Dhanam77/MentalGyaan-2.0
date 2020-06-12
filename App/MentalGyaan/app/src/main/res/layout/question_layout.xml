@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/question_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:text="haha"
+        android:textSize="20dp"/>
+
+
+    <EditText
+        android:id="@+id/question_ans"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:hint="Write here...."
+        android:background="@drawable/inputs"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:layout_marginTop="40dp"
+        android:gravity="top"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@id/question_text"/>
+
+
+
+
+</RelativeLayout>
