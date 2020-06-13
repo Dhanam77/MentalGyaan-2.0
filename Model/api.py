@@ -16,7 +16,7 @@ def get_sentiment():
     json = request.json
 
     if json == None:
-        return jsonify({"null":"df"})
+        return jsonify({"null":"Enter valid input"})
 
     for x in json:
         s = json[x]
