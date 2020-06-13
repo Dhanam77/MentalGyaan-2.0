@@ -2,13 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.mentalgyaan">
 
+    <uses-permission android:name="android.permission.NETWORK_STATE"/>
     <uses-permission android:name="android.permission.INTERNET" />
-
-    <uses-feature android:name="android.hardware.camera" />
-    <uses-feature android:name="android.hardware.camera.flash" />
-
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
         android:allowBackup="true"
@@ -18,40 +13,32 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name=".DetailsActivity" />
         <activity android:name=".QuizActivity" />
-        <activity android:name=".DoneActivity" />
-        <activity android:name=".PlayingActivity" />
-
-        <activity
-            android:name=".HeartRateAtivity"
-            android:configChanges="keyboardHidden|orientation"
-            android:screenOrientation="portrait" />
-        <activity android:name=".AudioActivity" />
-        <activity android:name=".NoticeToCustomerActivity" />
-        <activity android:name=".ActivitiesActivity"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".QuotesActivity" />
-        <activity android:name=".HelpWebsiteActivity"
-            android:parentActivityName=".MainActivity"/>
         <activity android:name=".TherapyActivity" />
-        <activity android:name=".HelpActivity" />
+        <activity android:name=".QuotesActivity" />
         <activity
             android:name=".DiscoverWebsiteActivity"
             android:parentActivityName=".MainActivity" />
         <activity android:name=".ChatBotActivity" />
-        <activity android:name=".SliderActivity" >
+        <activity android:name=".HelpActivity" />
+        <activity android:name=".HelpWebsiteActivity" />
+        <activity android:name=".NoticeToCustomerActivity" />
+        <activity android:name=".ActivitiesActivity" />
+        <activity android:name=".PlayingActivity" />
+        <activity android:name=".AudioActivity" />
+        <activity android:name=".DoneActivity" />
+        <activity android:name=".SliderActivity" />
+        <activity android:name=".SplashActivity">
 
         </activity>
-        <activity android:name=".SplashActivity" ><intent-filter>
+        <activity android:name=".QuestionnaireActivity" />
+        <activity android:name=".MainActivity" ><intent-filter>
             <action android:name="android.intent.action.MAIN" />
 
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter></activity>
-        <activity android:name=".QuestionnaireActivity" />
-        <activity android:name=".MainActivity">
-
-        </activity>
     </application>
 
 </manifest>

@@ -12,7 +12,7 @@
         android:layout_alignParentTop="true"
         android:scaleType="centerCrop"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/yoga"
+        android:src="@drawable/quizmain"
         android:id="@+id/image11"/>
 
 

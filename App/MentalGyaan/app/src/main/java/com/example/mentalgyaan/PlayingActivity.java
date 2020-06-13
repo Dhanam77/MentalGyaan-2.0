@@ -1,5 +1,7 @@
 package com.example.mentalgyaan;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -9,8 +11,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import com.example.mentalgyaan.Common.Common;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -98,7 +99,7 @@ public class PlayingActivity extends AppCompatActivity implements View.OnClickLi
         }
         else
         {
-            Intent intent = new Intent(this, MainActivity.class);
+            Intent intent = new Intent(this,MainActivity.class);
             Bundle dataSent = new Bundle();
             dataSent.putInt("SCORE",score);
             databaseReference.child("Details").child("Score").setValue(score);
@@ -132,7 +133,7 @@ public class PlayingActivity extends AppCompatActivity implements View.OnClickLi
         }
         else
         {
-            Intent intent = new Intent(this, MainActivity.class);
+            Intent intent = new Intent(this,MainActivity.class);
             Bundle dataSent = new Bundle();
             dataSent.putInt("SCORE",score);
             databaseReference.child("Details").child("Score").setValue(score);

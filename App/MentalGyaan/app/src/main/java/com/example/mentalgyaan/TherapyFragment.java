@@ -36,8 +36,9 @@ public class TherapyFragment extends Fragment {
     private ArrayList<Therapies> therapiesArrayList = new ArrayList<>();
     private RecyclerView therapyRecycler;
     private ProgressBar loadingBar;
+    private String score;
+
     private int m;
-    String score;
 
     public TherapyFragment() {
         // Required empty public constructor
@@ -52,6 +53,7 @@ public class TherapyFragment extends Fragment {
 
 
         Init();
+
         Ref.child("Details").child("Score").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -65,13 +67,16 @@ public class TherapyFragment extends Fragment {
             }
         });
 
+
         SetupTherapies();
+
+
 
         return mView;
 
     }
 
-    private void SetupTherapies()  {
+    private void SetupTherapies() {
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
         therapyRecycler.setLayoutManager(layoutManager);
 
@@ -148,12 +153,11 @@ public class TherapyFragment extends Fragment {
 
     private void Init() {
 
-        therapyRecycler = (RecyclerView)mView.findViewById(R.id.therapy_sesions);
+        therapyRecycler = (RecyclerView) mView.findViewById(R.id.therapy_sesions);
         Ref = FirebaseDatabase.getInstance().getReference();
 
-        loadingBar = (ProgressBar)mView.findViewById(R.id.load_therapies);
+        loadingBar = (ProgressBar) mView.findViewById(R.id.load_therapies);
     }
-
 
 
 }

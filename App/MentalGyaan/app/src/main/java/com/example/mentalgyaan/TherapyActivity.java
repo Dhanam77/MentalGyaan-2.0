@@ -18,34 +18,57 @@ public class TherapyActivity extends AppCompatActivity {
     private CircleImageView breatheimage;
     private Button startButton;
     private TextView breatheinText, breateOutText, timer;
-    private int inCount;
+     int inCount=5;
+    CountDownTimer mCount,mCount1;
 
+    public int flag=1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_therapy);
 
 
-        Init();
+       // Init();
+        timer = (TextView)findViewById(R.id.timer);
+        breatheinText = (TextView) findViewById(R.id.breathe_in);
+        breatheimage = (CircleImageView) findViewById(R.id.breathe_image);
+        startButton = (Button) findViewById(R.id.start_breathe);
 
 
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
-                new CountDownTimer(10000, 1000) {
+                breatheinText.setText("Breathe in for");
+                inCount=5;
+                timer.setText(String.valueOf(inCount));
+              new CountDownTimer(5000, 1000) {
                     public void onTick(long millisec) {
+                        --inCount;
                         timer.setText(String.valueOf(inCount));
-                        inCount--;
-                    }
 
+
+                    }
                     public void onFinish() {
-                        breateOutText.setVisibility(View.VISIBLE);
-                        breatheinText.setVisibility(View.INVISIBLE);
+                        //breateOutText.setVisibility(View.VISIBLE);
+                        breatheinText.setText("Breathe out for");
+                        inCount=6;
+                        new CountDownTimer(6000, 1000) {
+                            public void onTick(long millisec) {
+                                --inCount;
+                                timer.setText(String.valueOf(inCount));
+
+
+                            }
+                            public void onFinish() {
+                                //breateOutText.setVisibility(View.VISIBLE);
+                                //breatheinText.setVisibility(View.INVISIBLE);
+
+                            }
+                        }.start();
 
                     }
                 }.start();
+
             }
         });
 
@@ -55,7 +78,6 @@ public class TherapyActivity extends AppCompatActivity {
     private void Init() {
 
         timer = (TextView)findViewById(R.id.timer);
-        breateOutText = (TextView) findViewById(R.id.breate_out);
         breatheinText = (TextView) findViewById(R.id.breathe_in);
         breatheimage = (CircleImageView) findViewById(R.id.breathe_image);
         startButton = (Button) findViewById(R.id.start_breathe);

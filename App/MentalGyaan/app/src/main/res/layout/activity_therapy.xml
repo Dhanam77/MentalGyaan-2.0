@@ -38,16 +38,7 @@
             android:textSize="23dp" />
 
 
-        <TextView
-            android:id="@+id/breate_out"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/breathe_image"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
-            android:text="Breathe out for"
-            android:textSize="23dp"
-            android:visibility="invisible" />
+
 
 
         <TextView
@@ -57,7 +48,7 @@
             android:layout_below="@id/breathe_image"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="80dp"
-            android:text="10"
+            android:text="5"
             android:textSize="33dp" />
 
         <TextView

@@ -1,5 +1,7 @@
 package com.example.mentalgyaan;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -7,8 +9,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
@@ -65,7 +65,7 @@ public class DetailsActivity extends AppCompatActivity implements RadioGroup.OnC
         Fa = Age.getText().toString().trim();
         String A = Fa;
         databaseReference.child("Details").child("Age").setValue(A);
-        startActivity(new Intent(this, QuizActivity.class));
+        startActivity(new Intent(this,QuizActivity.class));
     }
     @Override
     public void onCheckedChanged(RadioGroup group, int checkedId) {

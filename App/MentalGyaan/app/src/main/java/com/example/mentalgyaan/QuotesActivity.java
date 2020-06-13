@@ -2,7 +2,6 @@ package com.example.mentalgyaan;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 
 import android.os.Bundle;
@@ -20,7 +19,6 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Set;
 
 public class QuotesActivity extends AppCompatActivity {
 
@@ -29,7 +27,6 @@ public class QuotesActivity extends AppCompatActivity {
     private TextView quoteText;
     private String image, name;
     private ImageView quoteImage;
-    private Toolbar mToolbar;
 
     private ProgressBar loadingBar;
 
@@ -82,14 +79,6 @@ public class QuotesActivity extends AppCompatActivity {
         quoteText = (TextView) findViewById(R.id.quote_text);
         loadingBar = (ProgressBar) findViewById(R.id.load_quotes);
 
-        SetupToolbar();
 
-    }
-    private void SetupToolbar() {
-        mToolbar = (Toolbar) findViewById(R.id.quote_bar);
-        setSupportActionBar(mToolbar);
-        getSupportActionBar().setTitle("Quote for the day");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
     }
 }

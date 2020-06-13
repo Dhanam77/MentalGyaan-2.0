@@ -3,22 +3,21 @@
 
     <item
         android:id="@+id/side_quiz"
-        android:title="Take Quiz"
-        android:icon="@drawable/ic_bookmark_black_24dp"/>
+        android:title="Take Quiz" />
 
 
 
 
     <item
         android:id="@+id/side_help"
-        android:title="Need Help?"
-        android:icon="@drawable/ic_accessibility_black_24dp"/>
+        android:title="Need Help?" />
     <item
         android:id="@+id/side_noti"
-        android:title="Send Notification"
-        android:icon="@drawable/ic_arrow_forward_black_24dp"/>
+        android:title="Send Notification" />
 
-
+    <item
+        android:id="@+id/side_face"
+        android:title="Emotion Detector" />
 
 
 

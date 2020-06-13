@@ -19,6 +19,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
@@ -27,14 +28,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private Toolbar mToolbar;
     private BottomNavigationView bottomNavigationView;
     private DrawerLayout drawerLayout;
-    private NavigationView navigationView;
+   // private NavigationView navigationView;
+    private DatabaseReference Ref;
 
+    public String score;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         InitializeFields();
+
+        Ref = FirebaseDatabase.getInstance().getReference();
 
 
         drawerLayout = findViewById(R.id.drawer_layout);
@@ -43,12 +48,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
-        SetNavigationView();
+     //   SetNavigationView();
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new TherapyFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new DiaryFragment()).commit();
 
         bottomNavigationView = (BottomNavigationView) findViewById(R.id.bot_nav);
         bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
+
+    }
+
+    private void SetupTherapies() {
+
+
 
     }
 
@@ -109,7 +120,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
 
-        Menu menu = navigationView.getMenu();
+     //   Menu menu = navigationView.getMenu();
 
 
         switch (menuItem.getItemId()) {
@@ -141,16 +152,25 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
                 drawer.closeDrawer(GravityCompat.START);
                 startActivity(new Intent(MainActivity.this, QuizActivity.class));
+
                 break;
             }
 
+            case R.id.side_face: {
+                DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+                drawer.closeDrawer(GravityCompat.START);
+            //    Intent intent = new Intent(MainActivity.this, FaceDetectionActivity.class);
+
+              //  startActivity(intent);
+                break;
+            }
 
 
         }
         return true;
     }
 
-
+/*
     //SET DATA IN NAVHEADER
     private void SetNavigationView() {
 
@@ -163,7 +183,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         TextView nameText = (TextView) header.findViewById(R.id.sidenav_header_name);
         nameText.setText("Dhanam Parekh");
     }
-
+*/
 
     private void InitializeFields() {
 

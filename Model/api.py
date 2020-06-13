@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 
 @app.route("/sentiment", methods = ['POST'])
-def hello():
+def get_sentiment():
 
     json = request.json
 
@@ -13,7 +13,7 @@ def hello():
 
     
     for x in json:
-        s = json[x];
+        s = json[x]
         if s == "You are beautiful":
             s = "Happy"
         elif s == "I am shit":
