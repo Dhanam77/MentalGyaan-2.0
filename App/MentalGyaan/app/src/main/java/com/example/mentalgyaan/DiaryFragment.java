@@ -122,7 +122,14 @@ public class DiaryFragment extends Fragment {
                             Sentiment sentiment = response.body();
                             AlertDialog alertDialog = new AlertDialog.Builder(getActivity()).create();
                             alertDialog.setTitle("Your Sentiment");
-                            alertDialog.setMessage("Predicted Result is "+sentiment.getSentiment());
+                            if(sentiment.getSentiment().equals("sad vibes")){
+                                alertDialog.setMessage("You are having sad vibes! Please head over to Moodify tab to improve your mood or visit the Personalized Therapies Section");
+
+                            }
+                            else{
+                                alertDialog.setMessage("You are having good vibes! Good to see that bruh! Rate this app NOWWW");
+
+                            }
                             alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
                                     new DialogInterface.OnClickListener() {
                                         public void onClick(DialogInterface dialog, int which) {
