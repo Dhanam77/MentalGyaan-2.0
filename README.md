@@ -9,5 +9,5 @@ It provides
 4. Diary Writing.
 
 
-This app uses Flask as backend server and Retrofit Library in Android to make API calls
+This app uses Flask as backend server and Retrofit Library in Android to make API calls.   
 Naive Bayes model is used to predict user's sentiment from his daily diary texts
